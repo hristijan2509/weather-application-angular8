@@ -1,0 +1,29 @@
+<!-- <div class="container">
+  <h1><b>5 day Forecast</b></h1>
+    <h2>City: {{cityName}}</h2>
+      <div *ngFor="let forecast of forecasts">
+        <h2>Temperature: {{forecast.main.temp}}&deg;</h2>
+          <div class="img">
+          <h3>Kind of Temperature: {{forecast.weatherKind}}</h3>
+          <h4>Max: {{forecast.main.temp_max}}&deg;</h4>
+          <h4>Min: {{forecast.main.temp_min}}&deg;</h4>
+          </div>
+      </div>
+</div> -->
+
+<div class="container">
+  <h2> &nbsp;&nbsp;City: <b><u>{{cityName}} </u></b><small> (5 day forecast)</small></h2>
+    <div *ngFor="let forecast of forecasts">
+  <article>
+    <div class="col-1">
+      <p> Temperature: <b>{{forecast.main.temp}}&deg;</b></p>
+      <p>Info: <b class="info">{{forecast.weather[0].description}}</b></p>
+    </div>
+    <div class="col-2">
+      <p><span class="maxTemp"> max: <b>{{forecast.main.temp_max}}&deg;</b></span> |
+      <span class="minTemp"> min: <b>{{forecast.main.temp_min}}&deg;</b></span></p>
+      <p>Wind Speed: <b>{{forecast.wind.speed}}</b></p>
+    </div>
+  </article>
+  </div>
+</div>

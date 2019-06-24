@@ -1,0 +1,33 @@
+<!-- <p>
+  current works!
+</p> -->
+<!-- <div class="container">
+    <div *ngFor="let myWeather of wheathers">
+      <h1>City: {{myWeather.cityName}}</h1>
+      <h2>Temperature: {{myWeather.temp}}&deg;</h2>
+      <div class="city-info">
+      <h3>Kind of Temperature: {{myWeather.weatherKind}}</h3>
+      <h4>Max: {{myWeather.tempMax}}&deg;</h4>
+      <h4>Min: {{myWeather.tempMin}}&deg;</h4>
+      </div>
+      <button class="btn btn-primary" [routerLink]="['/forecast', myWeather.cityName]" >5 Day Forecas</button>
+  </div>
+</div> -->
+
+<div class="container">
+    <div *ngFor="let myWeather of wheathers">
+  <article>
+    <div class="col-1">
+      <h3>City: <b>{{myWeather.cityName}}</b></h3>
+      <p> Temperature: <b>{{myWeather.temp}}&deg;</b></p>
+      <p>Info: <b class="info">{{myWeather.weatherKind}}</b></p>
+    </div>
+    <div class="col-2">
+      <p><span class="maxTemp"> max: <b>{{myWeather.tempMax}}&deg;</b></span> |
+      <span class="minTemp"> min: <b>{{myWeather.tempMin}}&deg;</b></span></p>
+      <p><button class="btn btn-primary" [routerLink]="['/forecast', myWeather.cityName]" >5 Day Forecast</button></p>
+    </div>
+  </article>
+  </div>
+</div>
+
